@@ -1,0 +1,879 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1E1E1E;
+}
+#clearButton {
+    background:#3E6F7E;
+    color: white;
+    border-radius: 25px;
+    float: left;
+    width: 100px;
+    height: 30px;
+    margin-top: 3px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+    transition: background .2s;
+}
+#clearButton:hover {
+
+    background:#367;
+
+}
+.button {
+    cursor: pointer;
+    user-select: none;
+}
+#searchButtonHolder {
+    background: #3E6F7E;
+    height: 30px;
+    width: 60px;
+    border-radius: 25px;
+    transition: background .2s;
+}
+
+#searchButtonHolder:hover {
+    background:#367;
+
+}
+#searchButton {
+    height: 25px;
+    margin-top: 2.5px;
+    margin-left: 17.5px;
+
+}
+
+#leftBoxes {
+    width: 100%;
+
+}
+.textBox {
+    user-select: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+}
+#extraTextBox {
+    display: none;
+}
+
+#rightBoxSide {
+    margin-top: 20px;
+    width: 100%;
+}
+.label {
+    font-weight: bold;
+    display: block;
+    float: left;
+    width: 50px;
+}
+#topBar {
+    width: 100%;
+    z-index: 3;
+}
+#leftHand {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+#pllogo {
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    float: left;
+}
+#pllogotext {
+    color: #ddd;
+    line-height: 30px;
+    border-left: 1px solid #ddd;
+    height: 30px;
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+#searchCar {
+    padding: 10px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.inputHolder {
+    border-radius: 25px;
+    background: #454545;
+    color: white;
+    width: 230px;
+    height: 30px;
+    padding: 2px;
+    display: flex; 
+    align-items: center; 
+    margin-right: 10px;
+}
+.inputSelect {
+    background: #3E6F7E;
+    color: white;
+    height: 25px;
+    border-radius: 25px;
+    margin: auto;
+    outline: none;
+    border: none;
+    max-width: 70px;
+    float: left;
+}
+option {
+    float: left;
+}
+select option:disabled {
+    display:none;
+}
+.inputInput {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    margin-left: 5px;
+}
+
+#selectCar {
+    overflow-y: auto;
+    width: 100%;
+    text-align:center;
+    display:inline-block;
+}
+
+.carOption {
+    background: #454545;
+    font-weight: bold;
+    color: white;
+    display:inline-block;  
+    padding: 4px;
+    border-radius: 25px;
+    margin: 2px;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    transition: background .2s;
+}
+.carOption:hover {
+    background: #777777;
+}
+#keyBoxes {
+
+}
+#results {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 5px;
+}
+.keyBox {
+    width: 20px;
+    height: 10px;
+    max-width: 20px;
+    max-height: 10px;
+    line-height: 10px;
+    text-align: center;
+    background: gray;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+.keyBoxSelected {
+    border: 1px solid white;
+    width: 20px;
+    max-width: 20px;
+    max-height: 10px;
+    line-height: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 10px;
+    cursor: pointer;
+}
+.keyBoxSelected:hover {
+    border: 1px solid white !important;
+}
+.keyBox:hover {
+    border: 1px solid white !important;
+}
+.keyBoxNumber {
+    user-select: none;
+    text-align: center;
+}
+.keyBoxLetter {
+    user-select: none;
+    text-align: center;
+}
+
+#tableMap {
+    padding: 10px;
+    display:inline-block;
+    vertical-align: top;
+}
+#bottomMap {
+    all: initial;
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+    background: #37d;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#searchFor {
+    width: 100px;
+    background: #4481e6;
+    height: 100%;
+    display:inline-block;
+    margin-right: 70px;
+    padding: 10px;
+    vertical-align: top;
+    white-space: nowrap;
+
+}
+#sfOption {
+    margin-bottom: 20px;
+}
+#sfText {
+    display:inline-block;
+    font-weight: bold;
+}
+#sfSelect {
+    display:inline-block;
+    width: 100px;
+    height: 30px;
+     
+}
+#sfInput {
+    margin-top: 5px;
+    height: 25px;
+}
+
+#body {
+    display: none;
+    left: 500px;
+    top: 0px;
+}
+#pullUp {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+
+    width: 100%;
+    height: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: lightgrey;
+}
+#pullUpStats {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+
+    width: 95%;
+    height: 95%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: lightgrey;
+    border-radius: 5px;
+
+}
+#pullUpOptions {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+
+    width: 95%;
+    height: 95%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: lightgrey;
+    border-radius: 5px;
+}
+#topBarMenus {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    background: rgb(135, 153, 192);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#bodyMenus {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+#identification {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px; 
+}
+#leftSide {
+    position: absolute;
+    font-size: 20px;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+#puLink {
+    cursor: pointer;
+    color: blue;
+    text-align: center;
+    left: 50%;
+    font-style: italic;
+}
+#puLink:hover {
+    color: lightblue;
+}
+#amountGroup {
+	float: left;
+}
+#puAmount {
+	float: left;
+}
+.amountBtn {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	user-select: none;
+	text-align: center;
+	line-height: 20px;
+	float: left;
+	margin-left: 5px;
+}
+.amountBtn:hover {
+	background: lightgray;
+}
+.amountBtn2 {
+	cursor: pointer;
+	width: 80px;
+	height: 20px;
+	background: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	user-select: none;
+	text-align: center;
+	line-height: 20px;
+	float: left;
+	margin-left: 5px;
+}
+.amountBtn2:hover {
+	background: lightgray;
+}
+#puExtraStats {
+    width: 60%;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    height: 43%;
+    background: #faa;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#topBar3 {
+    width: 100%;
+    height: 30px;
+    background: #f88;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+#puESList {
+    padding: 5px;
+    overflow: auto;
+    max-height: 80%;
+}
+#puIList {
+    padding: 5px;
+    overflow: auto;
+    max-height: 70%;
+}
+#keyList {
+    width: 60%;
+    top: 80px;
+    left: 20px;
+    position: absolute;
+    height: 33%;
+    background: #aaf;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#topBar4 {
+    width: 100%;
+    height: 30px;
+    background: #88f;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+#rightSide {
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    border-left: 3px solid gray;
+}
+#topBar2 {
+    height: 50px;
+    width: 100%;
+    background: lightblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#worksOn {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+
+}
+#worksNotes {
+	font-style: italic;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-overflow: ellipsis;
+    height: 25px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+#worksNotes:hover {
+    height: auto;
+    white-space: unset;
+    overflow: visible;
+    background: lightblue;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.24);
+}
+#worksOnList {
+    margin: 10px;
+    font-size: 18px;
+    overflow-y: auto;
+    height: 80%;
+    background: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+#puGoToCCR {
+	cursor: pointer;
+	background: white;
+	user-select: none;
+	border-radius: 2px;
+	border: 2px solid black;
+	width: 100px;
+	text-align: center;
+}
+#puGoToCCR:hover {
+	background: lightgray;
+}
+#keyIMG {
+    position: absolute;
+	width: 30%;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+#useChip {
+    position: absolute;
+    width: 30%;
+    right: 20px;
+    top: 100px;
+    background: #8f8;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#remoteViewer {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    z-index: 100;
+}
+
+
+#bottomBarFull {
+    display: none;
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    z-index: 100;
+    width: 100%;
+    background: rgb(102, 102, 102);
+}
+.bottomOption {
+    width: 225px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+    user-select: none;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#remoteViewerButton {
+	background: lightgreen;
+    float: left;
+}
+#remoteViewerButton:hover {
+    background: rgb(103, 196, 103);
+}
+#bottomBar {
+	background: #4b4b4b;
+    float: left;
+}
+#bottomBar:hover {
+    background: #313131;
+}
+#statButton {
+	background: #e34b4d;
+    float: left;
+}
+#statButton:hover {
+    background: #c33;
+}
+#mapButton {
+	background: #94d3d3;
+    float: right;
+}
+#mapButton:hover {
+	background: #559292;
+}
+#mapButton:hover > #bottomMap {
+    display: block;
+    
+}
+
+.statText {
+	font-size: 20px;
+}
+
+#remoteHolder {
+    border: 3px solid black;
+    border-radius: 5px;
+}
+#remoteHolder:hover {
+    border: 3px solid gold;
+}
+
+#remoteBottom {
+    display: none;
+    height: 45px;
+    bottom: 0px;
+    position: absolute;
+	background: #a5e2e4;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+#keyBoxLocation {
+    background: #3E6F7E;
+    border-radius: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    line-height: 43px;
+    height: 43px;
+    min-width: 43px;
+    text-align: center;
+}
+#keyBoxItemNotes {
+    position: absolute;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 13px;
+    top: 53px;
+    left: 12px;
+    font-size: 13px;
+    color: white;
+    max-height: 50px;
+    max-width: 225px;
+}
+.keyBoxButtons {
+    position: absolute;
+    font-weight: bold;
+    top: 0px;
+    right: 15px;
+    font-size: 28px;
+    color: black;
+    z-index: 4;
+}
+.keyBoxType {
+    font-size: 20px !important;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    padding: 10px;
+    color: white;
+}
+#keyBoxMoney {
+    font-size: 28px !important;
+    position: absolute;
+    font-weight: bold;
+    left: 10px;
+    bottom: 5px;
+
+    z-index: 4;
+}
+#keyBoxMoney2 {
+    font-size: 15px !important;
+    position: absolute;
+    font-weight: bold;
+    bottom: 10px;
+
+    z-index: 4;
+}
+#keyBoxAMT {
+    font-size: 20px !important;
+    position: absolute;
+
+    font-size: 13px !important;
+    color: #A5FF8E;
+    left: 14px;
+    top: 35px;
+    
+
+}
+.keyBoxImg {
+    position: absolute;
+    z-index: 2;
+    height: 246px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 25px;
+    user-select: none;
+}
+.keyBoxSelected2 {
+    position: absolute;
+    z-index: 5;
+    background: #3E6F7E;
+    height: 246px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 25px;
+    user-select: none;
+    font-size: 25px;
+    line-height: 246px;
+    color: white;
+    text-align: center;
+}
+#keyBoxAMT2 {
+    font-size: 20px !important;
+    position: absolute;
+
+    font-size: 13px !important;
+    color: #FF8E8E;
+    left: 14px;
+    top: 35px;
+
+}
+.keyboxHolder {
+    user-select: none;
+    cursor: pointer;
+    transition: background .2s;
+    height: 355px;
+    width: 248px;
+    display: inline-block;
+    border-radius: 25px;
+    margin: 10px;
+    background: #454545;
+}
+.keyboxHolder:hover {
+
+}
+.keyBoxTopHalf {
+    position: relative;
+    height: 246px;
+    width: 100%;
+    background: white;
+    border-radius: 25px;
+    width: 100%;
+}
+.keyBoxBotHalf {
+    width: 100%;
+    height: 109px;
+    position: relative; 
+
+}
+.keyBoxOptions {
+    width: 100%;
+    height: 40px;
+    background: gray;
+}
+.keyBoxSaveButton {
+    display: inline-block;
+    background: rgb(94, 95, 97);
+    cursor: pointer;
+    user-select: none;
+    width: max-content;
+    height: 20px;
+    padding: 5px;
+    margin-top: 5px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: white;
+
+}
+.keyBoxSaveButton:hover {
+    background: rgb(43, 75, 117);
+    
+}
+
+#saveKeys {
+    position: absolute;
+    background: lightslategrey;
+    
+}
+
+
+
+
+.keyBoxStats {
+    display: none;
+    position: relative;
+    width: 1594px;
+    height: 385px;
+    background: #454545;
+    border-radius: 25px;
+    margin-left: 10px;
+}
+.kbsBox {
+    top: 0px;
+    position: absolute;
+    width: 254px;
+    height: 385px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.kbsBox2 {
+    top: 0px;
+    position: absolute;
+    width: 508px;
+    height: 385px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.kbsHeader {
+    height: 25px;
+    width: 102%;
+    background: #3E6F7E;
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+    padding: 5px;
+}
+.kbsBody {
+    width: 100%;
+    height: 355px;
+    position: relative;
+}
+.whiteBorder {
+    position: absolute;
+    right: -5px;
+    border-right: 1px solid white;
+    width: 5px;
+    height: 90%;
+    bottom: 25px;
+}
+.roundEdgeLeft {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.roundEdgeRight {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#kbsB1 {
+    left: 0px;
+}
+#kbsB2 {
+    left: 269px;
+}
+#kbs2 {
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+#kbsB3 {
+    left: 537px;
+}
+#kbsB4 {
+    left: 802px;
+}
+#kbs4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+#kbsB5 {
+    left: 1066px;
+}
+#kbs5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+}
+.kbs2Text {
+    margin-bottom: 5px;
+    color: white;
+}
+.kbs5Text {
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow-y: auto;
+    height: 320px;
+}
+.johnsCar {
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
